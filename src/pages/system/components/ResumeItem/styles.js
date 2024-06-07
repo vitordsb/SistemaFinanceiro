@@ -4,10 +4,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
   background-color: #fff;
   border-radius: 5px;
-  padding: 5px 15px;
-  width: 30%;
+  padding: auto;
+  width: 50%;
 
   @media (max-width: 750px) {
     width: 20%;
@@ -29,10 +30,10 @@ export const Container = styled.div`
 export const Header = styled.header`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
-  gap: 10px;
-  margin: 20px auto;
+  gap: 5px;
+  margin: 10px auto;
 
   svg {
     width: 25px;

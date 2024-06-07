@@ -18,16 +18,12 @@ const System = () => {
     const amountExpense = transactionsList
       .filter((item) => item.expense)
       .map((transaction) => Number(transaction.amount));
-
     const amountIncome = transactionsList
       .filter((item) => !item.expense)
       .map((transaction) => Number(transaction.amount));
-
     const expense = amountExpense.reduce((acc, cur) => acc + cur, 0).toFixed(2);
     const income = amountIncome.reduce((acc, cur) => acc + cur, 0).toFixed(2);
-
     const total = Math.abs(income - expense).toFixed(2);
-
     setIncome(`R$ ${income}`);
     setExpense(`R$ ${expense}`);
     setTotal(`${Number(income) < Number(expense) ? "-" : ""}R$ ${total}`);
@@ -35,9 +31,7 @@ const System = () => {
 
   const handleAdd = (transaction) => {
     const newArrayTransactions = [...transactionsList, transaction];
-
     setTransactionsList(newArrayTransactions);
-
     localStorage.setItem("transactions", JSON.stringify(newArrayTransactions));
   };
 
@@ -45,11 +39,7 @@ const System = () => {
     <>
       <Header />
       <Resume income={income} expense={expense} total={total} />
-      <Form
-        handleAdd={handleAdd}
-        transactionsList={transactionsList}
-        setTransactionsList={setTransactionsList}
-      />
+      <Form handleAdd={handleAdd}transactionsList={transactionsList}setTransactionsList={setTransactionsList}/>
       <GlobalStyle />
     </>
   );

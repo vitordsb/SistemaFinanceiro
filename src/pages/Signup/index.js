@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import * as C from "./styles";
+import img from "../Signin/financeiro.png";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
@@ -38,6 +39,7 @@ const Signup = () => {
     <C.Container>
       <C.Content>
         <C.Label>CADASTRO</C.Label>
+        <C.img src={img} alt="img" />
         <Input
           type="email"
           placeholder="Digite seu E-mail"

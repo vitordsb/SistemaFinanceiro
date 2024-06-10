@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import GlobalStyle from "./systemStyle";
+import GlobalStyle from "./SystemStyle";
 import Header from "./components/Header";
 import Resume from "./components/Resume";
 import Form from "./components/Form";

@@ -5,10 +5,12 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100%;
-  background-color: #fff;
-  border-radius: 5px;
+  background-color: ${(props) => props.color || 'white'};
+  border-radius: 15px;
+  border: 2px solid black;
   padding: auto;
   width: 50%;
+  color: ${(props) => props.letra || 'black'};
 
   @media (max-width: 750px) {
     width: 20%;

@@ -32,6 +32,33 @@ export const img = styled.img`
   border-radius: 15px;
 `;
 
+export const Button = styled.button`
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-right: 400px;
+  cursor: pointer;
+  background-color: #046ee5;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  max-width: 150px;
+`;
+
+export const Input = styled.input`
+  outline: none;
+  padding: 16px 20px;
+  width: 40%;
+  height: 10%;
+  margin-right: 400px;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #f0f2f5;
+  border: none;
+`;
+
 export const Label = styled.label`
   font-size: 38px;
   font-weight: bolder;

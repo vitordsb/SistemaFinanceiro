@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import Input from "../../components/Input";
-import Button from "../../components/Button";
-import * as C from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import img from "./financeiro.png";
+import img from "../../assets/financeiro.png";
+import * as C from "./SigninStyle";
 
 const Signin = () => {
   const { signin } = useAuth();
@@ -35,12 +33,12 @@ const Signin = () => {
       <C.Content>
         <C.Label>LOGIN</C.Label>
         <C.img src={img} alt="img" />
-        <Input type="email"placeholder="E-mail"value={email}onChange={(e) => [setEmail(e.target.value), setError("")]}/>
+        <C.Input type="email"placeholder="E-mail"value={email}onChange={(e) => [setEmail(e.target.value), setError("")]}></C.Input>
 
-        <Input type="password"placeholder="Password"value={senha}onChange={(e) => [setSenha(e.target.value), setError("")]}/>
+        <C.Input type="password"placeholder="Password"value={senha}onChange={(e) => [setSenha(e.target.value), setError("")]}></C.Input>
         <C.labelError>{error}</C.labelError>
 
-        <Button Text="Enter" onClick={handleLogin} />
+        <C.Button onClick={handleLogin}>Enter</C.Button> 
         
         <C.LabelSignup>
           Não possui login?

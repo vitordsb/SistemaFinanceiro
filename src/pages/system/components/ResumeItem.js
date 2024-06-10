@@ -1,9 +1,9 @@
 import React from "react";
-import * as C from "./styles";
+import * as C from "../styles/ResumeItemStyle";
 
-const ResumeItem = ({ title, Icon, value }) => {
+const ResumeItem = ({ title, Icon, value, color, letra}) => {
   return (
-    <C.Container>
+    <C.Container letra={letra} color={color}>
       <C.Header>
         <C.HeaderTitle>{title}</C.HeaderTitle>
         <Icon />

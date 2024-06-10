@@ -1,26 +1,24 @@
 import React, { useState } from "react";
-import Input from "../../components/Input";
-import Button from "../../components/Button";
-import * as C from "./styles";
-import img from "../Signin/financeiro.png";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import img from "../../assets/financeiro.png";
+import * as C from "./SignupStyle";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
-  const [emailConf, setEmailConf] = useState("");
   const [senha, setSenha] = useState("");
+  const [senhaConf, setSenhaConf] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const { signup } = useAuth();
 
   const handleSignup = () => {
-    if (!email | !emailConf | !senha) {
+    if (!email | !senha | !senhaConf) {
       setError("Preencha todos os campos");
       return;
-    } else if (email !== emailConf) {
-      setError("Os e-mails não são iguais");
+    } else if (senha !== senhaConf) {
+      setError("As senhas não são iguais");
       return;
     }
 
@@ -40,26 +38,16 @@ const Signup = () => {
       <C.Content>
         <C.Label>CADASTRO</C.Label>
         <C.img src={img} alt="img" />
-        <Input
-          type="email"
-          placeholder="Digite seu E-mail"
-          value={email}
-          onChange={(e) => [setEmail(e.target.value), setError("")]}
-        />
-        <Input
-          type="email"
-          placeholder="Confirme seu E-mail"
-          value={emailConf}
-          onChange={(e) => [setEmailConf(e.target.value), setError("")]}
-        />
-        <Input
-          type="password"
-          placeholder="Crie sua Senha"
-          value={senha}
-          onChange={(e) => [setSenha(e.target.value), setError("")]}
-        />
+
+        <C.Input type="email"placeholder="Digite seu E-mail"value={email}onChange={(e) => [setEmail(e.target.value), setError("")]}></C.Input>
+
+        <C.Input type="password"placeholder="Crie sua Senha"value={senha}onChange={(e) => [setSenha(e.target.value), setError("")]}></C.Input>
+
+        <C.Input type="password"placeholder="Confirme sua Senha"value={senhaConf}onChange={(e) => [setSenhaConf(e.target.value), setError("")]}></C.Input>
+
         <C.labelError>{error}</C.labelError>
-        <Button Text="Registrar" onClick={handleSignup} />
+
+        <C.Button onClick={handleSignup}>Registrar</C.Button>
         <C.LabelSignin>
           Já tem uma conta?
           <C.Strong>

@@ -1,6 +1,6 @@
 import React from "react";
-import GridItem from "../GridItem";
-import * as C from "./styles";
+import GridItem from "./GridItem";
+import * as C from "../styles/GridStyle";
 
 const Grid = ({ itens, setItens }) => {
   const onDelete = (ID) => {
@@ -13,12 +13,10 @@ const Grid = ({ itens, setItens }) => {
     <C.Table>
       <C.Thead>
         <C.Tr>
-          <C.Th width={40}>Descrição</C.Th>
-          <C.Th width={40}>Valor</C.Th>
-          <C.Th width={10} alignCenter>
-            Tipo
-          </C.Th>
-          <C.Th width={10}></C.Th>
+          <C.Th width={20}>Descrição</C.Th>
+          <C.Th width={20}>Valor</C.Th>
+          <C.Th width={9} alignCenter>Status</C.Th>
+          <C.Th width={9}></C.Th>
         </C.Tr>
       </C.Thead>
       <C.Tbody>

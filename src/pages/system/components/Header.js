@@ -1,7 +1,7 @@
 import React from "react";
-import * as C from "./styles";
+import * as C from "../styles/HeaderStyle";
 import { useNavigate } from "react-router-dom";
-import useAuth from "../../../../hooks/useAuth";
+import useAuth from "../../../hooks/useAuth";
 
 const Header = () => {
   const { signout } = useAuth();

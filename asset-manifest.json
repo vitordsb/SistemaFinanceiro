@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/SistemaFinanceiro/static/js/main.00139c13.js",
+    "main.js": "/SistemaFinanceiro/static/js/main.3e6c0d5b.js",
     "static/media/financeiro.png": "/SistemaFinanceiro/static/media/financeiro.b36fb0659cefebd81552.png",
     "index.html": "/SistemaFinanceiro/index.html",
-    "main.00139c13.js.map": "/SistemaFinanceiro/static/js/main.00139c13.js.map"
+    "main.3e6c0d5b.js.map": "/SistemaFinanceiro/static/js/main.3e6c0d5b.js.map"
   },
   "entrypoints": [
-    "static/js/main.00139c13.js"
+    "static/js/main.3e6c0d5b.js"
   ]
 }

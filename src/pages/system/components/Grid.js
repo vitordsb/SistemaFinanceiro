@@ -13,6 +13,7 @@ const Grid = ({ itens, setItens }) => {
     <C.Table>
       <C.Thead>
         <C.Tr>
+          <C.Th width={15}>Data</C.Th>
           <C.Th width={20}>Descrição</C.Th>
           <C.Th width={20}>Valor</C.Th>
           <C.Th width={9} alignCenter>Status</C.Th>

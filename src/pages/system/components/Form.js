@@ -6,6 +6,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
   const [desc, setDesc] = useState("");
   const [amount, setAmount] = useState("");
   const [isExpense, setExpense] = useState(false);
+  const [data, setData] = useState(new Date().toLocaleDateString());
 
   const generateID = () => Math.round(Math.random() * 1000);
 
@@ -18,15 +19,17 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
       return;
     }
 
+
     const transaction = {
       id: generateID(),
+      data: data,
       desc: desc,
       amount: amount,
       expense: isExpense,
     };
 
     handleAdd(transaction);
-
+    setData("")
     setDesc("");
     setAmount("");
   };
@@ -34,6 +37,11 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
   return (
     <>
       <C.Container className="Container">
+
+      <C.InputContent>
+          <C.Label>Data</C.Label>
+          <C.Input value={data} onChange={(e) => setData(e.target.value)}/>
+        </C.InputContent>
         <C.InputContent>
           <C.Label>Descrição</C.Label>
           <C.Input value={desc} onChange={(e) => setDesc(e.target.value)} />
@@ -46,6 +54,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
             onChange={(e) => setAmount(e.target.value)}
           />
         </C.InputContent>
+       
         <C.RadioGroup>
           <C.Input type="radio" id="rIncome" defaultChecked name="group1"onChange={() => setExpense(!isExpense)}/>
           <C.Label htmlFor="rIncome">Entrada</C.Label>

@@ -28,6 +28,6 @@ export const Header = styled.h1`
 
 export const Title = styled.div`
   padding-top: 20px;
-  color: white;
+  color: black;
   font-size: 50px;
 `;

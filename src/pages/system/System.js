@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import GlobalStyle from "./SystemStyle";
+import SystemStyle from "./SystemStyle";
 import Header from "./components/Header";
 import Resume from "./components/Resume";
 import Form from "./components/Form";
@@ -37,10 +37,10 @@ const System = () => {
 
   return (
     <>
-      <Header />
+      <Header/>
       <Resume income={income} expense={expense} total={total} />
       <Form handleAdd={handleAdd}transactionsList={transactionsList}setTransactionsList={setTransactionsList}/>
-      <GlobalStyle />
+      <SystemStyle/>
     </>
   );
 };

@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100%;
+  box-shadow: 1px 1px 2px black;
   background-color: ${(props) => props.color || 'white'};
   border-radius: 15px;
   border: 2px solid black;

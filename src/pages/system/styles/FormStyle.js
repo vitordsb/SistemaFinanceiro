@@ -2,15 +2,17 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 1120px;
-  margin: 10px auto;
+  margin: auto;
   width: 100%;
-  background-color: #fff;
+  color: black;
+  font-weight: bold;
+  text-align: center;
   border-radius: 15px;
   display: flex;
   font-size: 20px;
   justify-content: space-around;
-  padding: 10px;
-  gap: 10px;
+  padding: 15px;
+  gap: 20px;
   @media (max-width: 750px) {
     display: grid;
   }
@@ -22,23 +24,23 @@ export const InputContent = styled.div`
 `;
 
 export const Label = styled.label`
-  font-size: 20px;
+  font-size: 25px;
 `;
 
 export const Input = styled.input`
-  outline: none;
   border-radius: 10px;
   padding: 5px 5px;
   text-align: center;
-  width: 90%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 200px;
   font-size: 20px;
   border: 1px solid #ccc;
 `;
 
 export const RadioGroup = styled.div`
   display: flex;
-  font-size: 20px;
+  margin-top: 0px;
+  font-size: 30px;
   font-weight: bold;
   align-items: center;
   input {
